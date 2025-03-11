@@ -1,0 +1,108 @@
+\documentclass[a4paper, utf8]{ctexart}
+\usepackage[fontset=Fandol]{ctex}
+\usepackage{anyfontsize}
+\usepackage{fontawesome}
+\usepackage{background}
+\usepackage{tcolorbox}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{url}
+\tcbuselibrary{theorems, skins}
+
+\geometry{a4paper, left=10mm,right=10mm,top=10mm,bottom=0mm}
+\CTEXsetup[format={\Large \bfseries}]{section}
+\setlength{\parindent}{2em}
+
+% 设置背景图片
+\pagestyle{empty}
+
+\backgroundsetup{
+    scale=1,
+    angle=0,
+    opacity=0.2,
+    contents={\includegraphics[width=\paperwidth,height=\paperheight]{figure/background.png}}
+}
+
+\definecolor{titlecolor}{RGB}{0, 102, 0}
+
+\newtcbtheorem[no counter]{unit}{}{
+    colback = white,
+    colframe = titlecolor,
+    colbacktitle = white,
+    coltitle = titlecolor,
+    fonttitle = \Large\songti\bfseries,
+    separator sign = {},
+    enhanced,
+    toprule = -1pt,
+    bottomrule = -1pt,
+    leftrule = -1pt,
+    rightrule = -1pt
+}{unit}
+
+\begin{document}
+
+    \begin{minipage}{0.75\textwidth}
+        {\huge \textbf{你的名字}}
+
+        \vspace{1em}
+        
+        \begin{tabular}{p{.4cm}p{6cm}}
+            \faCalendar & 出生年月：2000年00月 \\
+            \faPhone & 联系方式：123-4567-8910 \\
+            \faEnvelope & 电子邮箱：\url{abc@mail2.sysu.edu.cn} \\
+            \faUser & 求职意向：技术员 \\
+        \end{tabular}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.25\textwidth}
+        \includegraphics[width=.75\linewidth]{figure/profile.png}
+    \end{minipage}
+
+    \begin{unit}{教育经历 \vspace{.5em}}{}
+        {\bfseries \large 中山大学 \qquad XXX学院 \qquad 专业名称（硕士） \qquad 2000.00\ $\sim$\ 2000.00}
+        \begin{itemize}[itemsep=0pt, topsep=2pt, parsep=2pt]
+            \item 主修课程：
+            \item 学业成绩：
+        \end{itemize}
+
+        \vspace{.25em}
+
+        {\bfseries \large 中山大学 \qquad XXX学院 \qquad 专业名称（本科） \qquad 2000.00\ $\sim$\ 2026.06}
+        \begin{itemize}[itemsep=0pt, topsep=2pt, parsep=2pt]
+            \item 主修课程：
+            \item 学业成绩：
+        \end{itemize}
+    \end{unit}
+
+    \begin{unit}{项目经历 \vspace{.5em}}{}
+        {\bfseries \large 一个项目的标题 \qquad 担任角色 \qquad 2000.00\ $\sim$\ 2000.00}
+        \begin{itemize}[itemsep=0pt, topsep=2pt, parsep=2pt]
+            \item 项目背景：
+            \item 承担工作：
+            \item 项目成果：
+        \end{itemize}
+
+        \vspace{.25em}
+        
+        {\bfseries \large 一个项目的标题 \qquad 担任角色 \qquad 2000.00\ $\sim$\ 2000.00}
+        \begin{itemize}[itemsep=0pt, topsep=2pt, parsep=2pt]
+            \item 项目背景：
+            \item 承担工作：
+            \item 项目成果：
+        \end{itemize}
+    \end{unit}
+
+    \begin{unit}{技能特长 \vspace{.5em}}{}
+        \vspace{.25em}
+        这里写你的技能特长
+    \end{unit}
+
+    \begin{unit}{自我评价 \vspace{.5em}}{}
+        \vspace{.25em}
+        这里写你的自我评价
+    \end{unit}
+
+\end{document}
